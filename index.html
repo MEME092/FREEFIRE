@@ -1,3 +1,4 @@
+
 <!DOCTYPE html> 
 <html lang="es">
 <head>
@@ -8,7 +9,6 @@
   <style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5710936095528547"
      crossorigin="anonymous"></script>
-    
     body {
       background-color: #0a0a0a;
       font-family: 'Orbitron', sans-serif;
@@ -16,13 +16,14 @@
       margin: 0;
       padding: 0;
     }
-
+    html, body {
+      background-color: #0a0a0a !important;
+    }
     .header {
       background-color: #e84c0e;
       padding: 20px;
       text-align: center;
     }
-
     .header h1 {
       margin: 0;
       font-size: 2.5em;
@@ -30,7 +31,6 @@
       color: #fff;
       text-shadow: 0 0 10px #ff6a00;
     }
-
     .container {
       max-width: 400px;
       margin: 50px auto;
@@ -39,7 +39,6 @@
       padding: 30px;
       box-shadow: 0 0 20px rgba(255, 94, 0, 0.5);
     }
-
     input, select, button {
       width: 100%;
       padding: 12px;
@@ -49,12 +48,10 @@
       font-size: 1em;
       font-family: 'Orbitron', sans-serif;
     }
-
     input, select {
       background-color: #2a2a2a;
       color: #fff;
     }
-
     button {
       background-color: #e84c0e;
       color: #fff;
@@ -63,11 +60,9 @@
       transition: 0.3s;
       text-transform: uppercase;
     }
-
     button:hover {
       background-color: #c7430d;
     }
-
     .progress-bar {
       width: 100%;
       background-color: #2a2a2a;
@@ -76,19 +71,16 @@
       margin-top: 20px;
       display: none;
     }
-
     .progress {
       height: 20px;
       background-color: #ffcc00;
       width: 0%;
     }
-
     .status {
       margin-top: 20px;
       text-align: center;
       font-weight: bold;
     }
-
     .ads {
       margin-top: 40px;
       padding: 15px;
@@ -96,13 +88,11 @@
       text-align: center;
       border-top: 2px solid #e84c0e;
     }
-
     .ads img {
       max-width: 100%;
       border-radius: 8px;
       margin-top: 10px;
     }
-
     .popup {
       display: none;
       position: fixed;
@@ -119,12 +109,10 @@
       opacity: 0;
       transition: transform 0.3s ease, opacity 0.3s ease;
     }
-
     .popup.show {
       transform: translate(-50%, -50%) scale(1);
       opacity: 1;
     }
-
     .overlay {
       display: none;
       position: fixed;
@@ -135,12 +123,10 @@
       opacity: 0;
       transition: opacity 0.3s ease;
     }
-
     .overlay.show {
       display: block;
       opacity: 1;
     }
-
     .verify-button {
       margin-top: 15px;
       background: linear-gradient(to right, #ffcc00, #e88c00);
@@ -156,13 +142,11 @@
       animation: pulse 1.2s infinite, glowText 2s infinite;
       text-transform: uppercase;
     }
-
     @keyframes pulse {
       0% { box-shadow: 0 0 10px #ffcc00; }
       50% { box-shadow: 0 0 20px #ffa500; }
       100% { box-shadow: 0 0 10px #ffcc00; }
     }
-
     @keyframes glowText {
       0%   { text-shadow: 0 0 5px #fff200, 0 0 10px #ff0; }
       50%  { text-shadow: 0 0 20px #fff200, 0 0 40px #ff0; }
@@ -178,7 +162,7 @@
   </div>
 
   <div class="ads">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5710936095528547"
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5710936095528547"
      crossorigin="anonymous"></script>
 <!-- Anun 1 -->
 <ins class="adsbygoogle"
@@ -206,7 +190,7 @@
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-    <img src="ad-intermedio-1.jpg" alt="Publicidad intermedia 1">
+   
   </div>
 
   <div class="container">
@@ -226,7 +210,7 @@
   </div>
 
   <div class="ads">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5710936095528547"
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5710936095528547"
      crossorigin="anonymous"></script>
 <!-- anunl3 -->
 <ins class="adsbygoogle"
@@ -238,11 +222,11 @@
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-   
+    
   </div>
 
   <div class="ads">
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5710936095528547"
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5710936095528547"
      crossorigin="anonymous"></script>
 <!-- Anunl4 -->
 <ins class="adsbygoogle"
@@ -254,7 +238,7 @@
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-    
+   
   </div>
 
   <div class="overlay" id="overlay"></div>
@@ -269,17 +253,14 @@
       const progressBar = document.getElementById('progressBar');
       const progress = document.getElementById('progress');
       const status = document.getElementById('status');
-
       clickSound.play();
       progressBar.style.display = 'block';
       progress.style.width = '0%';
       status.innerText = 'Generando diamantes...';
-
       let width = 0;
       const interval = setInterval(() => {
         width += 1;
         progress.style.width = width + '%';
-
         if (width >= 100) {
           clearInterval(interval);
           status.innerText = '¡Diamantes añadidos con éxito!';
@@ -289,7 +270,6 @@
         }
       }, 40);
     }
-
     function showPopup() {
       document.getElementById('clickSound').play();
       const overlay = document.getElementById('overlay');
@@ -300,7 +280,6 @@
         popup.classList.add('show');
       }, 10);
     }
-
     function closePopup() {
       const overlay = document.getElementById('overlay');
       const popup = document.getElementById('popup');
